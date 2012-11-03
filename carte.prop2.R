@@ -19,7 +19,9 @@ carte.prop2<-function (sp, data, varname, sp.key = "id", data.key = "id",
         ]
     tmp.var <- na.omit(sp@data[, varname])
     if (is.null(at)) {
-        at <- pretty(tmp.var, n = nbcuts)
+         source("/media/Data/Dropbox/Thèse/données propres/scripts et fonctions/discretize.R")
+    #    at <- pretty(tmp.var, n = nbcuts)
+         at <- discretize(tmp.var)  ## changement de méthode de discrétisation
     }
     if (!is.null(at) && at.lim) {
         vmax <- max(tmp[, varname], na.rm = TRUE)
