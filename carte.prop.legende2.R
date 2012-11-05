@@ -63,5 +63,4 @@ carte.prop.legende2 <- function (posleg = "topleft", at, palette, rect.width = 0
     }
   }
   if (north.arrow) northarrow(loc = c(left + rect.width, top - (nb.rect + 30) * rect.height), size = (usr[4]-usr[3])/25, cex = 0.6)
-  
 }
